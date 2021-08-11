@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/lib/font-awesome/css/font-awesome.min.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <nav>
+            <div class="nav-brand">
+                <a href="index.html" class="fa fa-calculator"></a>
+                <p>Calculator</p>
+            </div>
+
+            <!-- Dark Mode Toggler -->
+            <div id="darkmodebar">
+                <span class="fa fa-cloud"></span>
+                <button class="dark-mode-btn" onclick="darkmode();">
+                    <div></div>
+                </button>
+            </div>
+
+            <button class="fa fa-clock-o history-btn" onclick="document.querySelector('.history').style.right = '0rem'"></button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calculator">
+            <div class="display-panel">
+                <input type="text" class="input-display">
+                <div class="output-display"></div>
+            </div>
+            <div class="button-panel">
+                <button>sin</button>
+                <button>cos</button>
+                <button>tan</button>
+                <button>log</button>
+                <button class="fa fa-mail-reply" value="del"></button>
+                <button onclick="document.querySelector('.input-display').value += '/'">/</button>
+                <button onclick="document.querySelector('.input-display').value += '*'">x</button>
+                <button onclick="document.querySelector('.input-display').value += '-'">-</button>
+                <button onclick="document.querySelector('.input-display').value += '+'">+</button>
+                <button>abs</button>
+                <button onclick="document.querySelector('.input-display').value += '7'">7</button>
+                <button onclick="document.querySelector('.input-display').value += '8'">8</button>
+                <button onclick="document.querySelector('.input-display').value += '9'">9</button>
+                <button>1/x</button>
+                <button>CA</button>
+                <button onclick="document.querySelector('.input-display').value += '4'">4</button>
+                <button onclick="document.querySelector('.input-display').value += '5'">5</button>
+                <button onclick="document.querySelector('.input-display').value += '6'">6</button>
+                <button onclick="sqrt();" value="sqrt">&Sqrt;</button>
+                <button>-/+</button>
+                <button onclick="document.querySelector('.input-display').value += '1'">1</button>
+                <button onclick="document.querySelector('.input-display').value += '2'">2</button>
+                <button onclick="document.querySelector('.input-display').value += '3'">3</button>
+                <button onclick="document.querySelector('.input-display').value += '**'">x^y</button>
+                <button onclick="document.querySelector('.input-display').value += '&pi;'">&pi;</button>
+                <div class="bottom">
+                    <button value="0" onclick="document.querySelector('.input-display').value += '0'">0</button>
+                    <button onclick="document.querySelector('.input-display').value += '.'">.</button>
+                    <button>%</button>
+                    <button onclick="solve();">=</button>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="history">
+            <h3 style="text-align: center; font-family: monospace; padding: .5rem; color: slateblue; font-size: 1.3rem;">History</h3>
+            <span class="fa fa-arrow-right" onclick="document.querySelector('.history').style.right = '-100rem'"></span>
+            <div class="items">
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

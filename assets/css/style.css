@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    color: slateblue;
+}
+
+body{
+    background: whitesmoke;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    box-shadow: 5px 2.5px 5px rgba(0, 0, 0, 0.05), -5px -2.5px 5px white;
+    border-radius: 2rem;
+}
+
+nav * {
+    align-self: center;
+}
+
+.nav-brand{
+    display: flex;
+}
+
+.nav-brand a{
+    font-size: 2rem;
+}
+
+.nav-brand p{
+    padding: .5rem;
+    color: slateblue;
+}
+
+.dark-mode-btn{
+    background: white;
+    border-radius: 5rem;
+    border: none;
+    width: 2.5rem;
+    box-shadow: 5px 2.5px 5px rgba(0, 0, 0, 0.05);
+    outline: none;
+    transition: .5s;
+    padding: .15rem;
+}
+
+.dark-mode-btn div{
+    background: slateblue;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    transition: .5s;
+}
+
+.dark-mode-btn.on{
+    background: rgb(92, 86, 110);
+    outline: none;
+}
+
+.dark-mode-btn div.on{
+    background: white;
+    transform: translateX(120%);
+}
+
+.dark-mode-btn div.darkmode{
+    box-shadow: 5px 2.5px 5px rgba(0, 0, 0, 0.2), -1px -1px 5px rgb(73, 71, 82);
+    background: slateblue;
+    border: none;
+}
+
+main{
+    display: flex;
+    place-content: center;
+}
+
+main section{
+    padding: 2rem;
+    box-shadow: 5px 2.5px 5px rgba(0, 0, 0, 0.05), -5px -2.5px 5px white;
+    border-radius: .5rem;
+}
+
+.nav-brand a.darkmode, p.darkmode{
+    color: white;
+}
+
+.display-panel{
+    padding: .5rem;
+    box-shadow: inset 5px 2.5px 10px rgba(0, 0, 0, 0.05), inset -5px -2.5px 10px white;
+    border-radius: .1rem;
+    height: 8.4rem;
+}
+
+.display-panel .input-display{
+    border: none;
+    background: inherit;
+    padding-bottom: 2rem;
+    font-size: 1.2rem;
+    color: slateblue;
+    width: 100%;
+    padding: 1rem;
+}
+
+.fadein{
+    animation: 1s fadein;
+
+}
+
+@keyframes fadein{
+    from {
+        opacity: 0;
+    }
+}
+
+.display-panel .output-display{
+    font-size: 1.15rem;
+    color: rgba(19, 202, 19, 0.788);
+    padding: 2rem .5rem;
+    text-align: right;
+}
+
+.button-panel button{
+    box-shadow: 5px 2.5px 5px rgba(0, 0, 0, 0.05), -5px -2.5px 5px white;
+    border: none;
+    padding: 1rem;
+    border-radius: .5rem;
+    background: whitesmoke;
+    color: rgba(105, 90, 205, 0.8);
+}
+
+.button-panel button:active{
+    box-shadow: inset 5px 2.5px 5px rgba(0, 0, 0, 0.05), inset -5px -2.5px 5px white;
+}
+
+.button-panel button[value="0"]{
+    width: 7rem;
+}
+
+.button-panel .bottom{
+    display: grid;
+    width: 100%;
+    grid-gap: .8rem;
+    grid-template-columns: auto auto auto auto;
+}
+
+.bottom button{
+    width: 3rem;
+}
+
+.button-panel{
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(2.9rem, 1fr));
+    grid-gap: .8rem;
+}
+
+body.darkmode{
+    background: rgb(68, 66, 77)
+}
+
+nav.darkmode{
+    box-shadow: 5px 2.5px 5px rgba(0, 0, 0, 0.1), -5px -2.5px 5px rgb(72, 70, 87);
+}
+
+.calculator.darkmode{
+    /* box-shadow: 5px 2.5px 5px rgba(0, 0, 0, 0.05), -5px -2.5px 5px rgba(82, 81, 88, 0.2); */
+    box-shadow: 0 0 0;
+}
+
+.display-panel.darkmode{
+    box-shadow: 5px 2.5px 5px rgba(0, 0, 0, 0.1), -5px -2.5px 5px rgba(78, 76, 87, 0.3);
+
+}
+
+.button-panel button.darkmode{
+    box-shadow: 5px 2.5px 5px rgba(0, 0, 0, 0.1), -5px -2.5px 5px rgba(72, 70, 83, 0.8);
+    background: rgb(65, 63, 77);
+    color: white;
+}
+
+.button-panel button.darkmode:active{
+    box-shadow: inset 5px 2.5px 5px rgba(0, 0, 0, 0.1), inset -5px -2.5px 5px rgba(72, 70, 83, 0.8);
+    background: rgb(65, 63, 77);
+    color: white;
+}
+
+#darkmodebar span.darkmode{
+    color: white;
+}
+
+.history-btn{
+    box-shadow: 5px 2.5px 5px rgba(0, 0, 0, 0.05), -5px -2.5px 5px white;
+    border: none;
+    background: inherit;
+    padding: .5rem;
+    border-radius: 50%;
+    color: slateblue;
+}
+
+.history-btn:active{
+    box-shadow: inset 5px 2.5px 5px rgba(0, 0, 0, 0.05), inset -5px -2.5px 5px white;
+
+}
+
+.history-btn.darkmode{
+    box-shadow: 5px 2.5px 5px rgba(0, 0, 0, 0.1), -5px -2.5px 5px rgba(72, 70, 83, 0.8);
+    color: white;
+}
+
+.history{
+    position: fixed;
+    right: -100rem;
+    height: 100%;
+    top: 0;
+    background: whitesmoke;
+    padding: 0;
+    width: 15rem;
+    overflow: auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: .5s;
+    border-radius: 0%;
+}
+
+.history span{
+    padding: .5rem;
+    color: slateblue;
+    font-size: 1.5rem;
+}
+
+.history .item{
+    padding: 1rem 2rem;
+    color: white;
+    background: rgba(105, 90, 205, 0.856);
+    font-family: monospace;
+}
